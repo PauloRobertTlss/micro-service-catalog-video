@@ -5,12 +5,7 @@ services:
     app:
         build: .
         container_name: micro-videos-app
-        entrypoint: dockerize -template ./.docker/app/.env:.env -wait tcp://db:3306 -timeout 40s ./.docker/entrypoint.sh
-        environment:
-            - _DB_HOST=db
-            - _DB_DATABASE=code_micro_videos
-            - _DB_USERNAME=root
-            - _DB_PASSWORD=root
+        entrypoint: dockerize -wait tcp://db:3306 -timeout 40s ./.docker/entrypoint.sh
         volumes:
             - .:/var/www
         networks:
@@ -43,9 +38,10 @@ services:
             - "33006:3306"
         volumes:
             - ./.docker/dbdata:/var/lib/mysql
+            - ./.docker/mysql:/docker-entrypoint-initdb.d
+        #criar db's | sudo rm -rf .docker/dbdata
         environment:
-            - MYSQL_DATABASE=code_micro_videos
-            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_ROOT_PASSWORD=@ge380134
             - MYSQL_USER=root
         networks:
             - app-network

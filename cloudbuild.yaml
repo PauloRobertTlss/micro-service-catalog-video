@@ -1,0 +1,37 @@
+steps:
+
+- id: "[OWN]Rodando docker-composer"
+  name: 'gcr.io/$PROJECT_ID/docker-compose'
+  args: ['-f', 'docker-compose.prod.yaml','up','-d']
+
+- id: "[GCR] - Rodando docker ps"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['ps']
+
+- id: "[OWN] - workdir"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','ls']
+
+- id: "[OWN] - Rodando composer vendor"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','composer','install']
+
+- id: "[OWN] - Copiando .env - Template"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','cp','.env.example','.env']
+
+- id: "[OWN] - Copiando .env.testing - Template"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','cp','.env.testing.example','.env.testing']
+
+- id: "[OWN] - Rodando key:generate"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','php','/var/www/artisan','key:generate']
+
+- id: "[OWN] - Rodando migrations"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','php','/var/www/artisan','migrate']
+
+- id: "[OWN] - Rodando phpunit"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','php','/var/www/vendor/bin/phpunit','-c','/var/www/phpunit.xml']

@@ -7,7 +7,7 @@ services:
     container_name: app
     entrypoint: dockerize -wait tcp://db:3006 --timeout 40s ./.docker/entrypoint.sh
     volumes:
-      - .:/var/wwww
+      - .:/var/www
     networks:
       - app-network
     depends_on:
@@ -22,7 +22,7 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - .:/var/wwww
+      - .:/var/www
     networks:
       - app-network
     depends_on:

@@ -21,9 +21,7 @@ RUN ln -s public html
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
 
 COPY . /var/www
-RUN composer install && \
-    php artisan key:generate && \
-    php artisan cache:clear && \
+RUN php artisan cache:clear && \
     chmod -R 775 storage
 
 RUN npm install

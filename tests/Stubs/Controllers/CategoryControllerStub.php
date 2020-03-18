@@ -13,4 +13,22 @@ class CategoryControllerStub extends BaseCrudController
     {
         return CategoryStub::class;
     }
+
+    protected function rulesStore()
+    {
+        return [
+            'name' => 'required',
+            'is_active' => 'required',
+            'description' => 'nullable'
+        ];
+    }
+
+    protected function rulesUpdate()
+    {
+        return [
+            'name' => 'required',
+            'is_active' => 'required',
+            'description' => 'nullable'
+        ];
+    }
 }

@@ -53,14 +53,12 @@ class CategoryControllerTest extends TestCase
 
         $data = [
             'name' => str_repeat('a', 256),
-            'is_active' => "a"
         ];
 
         $this->assertInvalidationStoreAction($data, 'max.string',['max' => 255]);
         $this->assertInvalidationUpdateAction($data, 'max.string', ['max' => 255]);
 
         $data = [
-            'name' => 'test',
             'is_active' => "a"
         ];
 
@@ -115,7 +113,7 @@ class CategoryControllerTest extends TestCase
     {
 
         $response = $this->json('DELETE', route('categories.destroy', ['category' => $this->category->id]));
-        $response->assertStatus(422);
+        $response->assertStatus(204);
         $this->assertNull(Category::find($this->category->id));
         $this->assertNotNull(Category::withTrashed()->find($this->category->id));
     }

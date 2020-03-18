@@ -31,7 +31,7 @@ trait TestStore
     public function assertUpdate(array $sendData, array $testDatabase, array $testJson = null): TestResponse
     {
         /** @var TestResponse $response */
-        $response = $this->json('PUT', $this->routeStore(), $sendData);
+        $response = $this->json('PUT', $this->routeUpdate(), $sendData);
 
         if ($response->getStatusCode() !== 200) {
             throw new \Exception('Response status code must be 200, given ' . $response->getStatusCode());

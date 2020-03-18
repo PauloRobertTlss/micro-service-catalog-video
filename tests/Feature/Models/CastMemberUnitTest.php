@@ -2,13 +2,13 @@
 
 namespace Tests\Feature\Models;
 
-use App\Models\Genre;
+use App\Models\CastMember;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class GenreUnitTest extends TestCase
+class CastMemberUnitTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -17,16 +17,15 @@ class GenreUnitTest extends TestCase
     
     public function testList()
     {
-        factory(Genre::class)->create();
+        factory(CastMember::class, 1)->create();
 
-        $collection = Genre::all();
+        $collection = CastMember::all();
         $attributeKeys = array_keys($collection->first()->getAttributes());
 
         $this->assertEqualsCanonicalizing([
             'id',
             'name',
-            'description',
-            'is_active',
+            'type',
             'created_at',
             'updated_at',
             'deleted_at'
@@ -35,44 +34,35 @@ class GenreUnitTest extends TestCase
 
     public function testCreate()
     {
-        $category = Genre::create([
-            'name' => 'First'
+        $category = CastMember::create([
+            'name' => 'First',
+            'type' => CastMember::TYPE_ACTOR
         ]);
 
         $category->refresh();
 
         $this->assertEquals(36, strlen($category->id));
         $this->assertEquals('First', $category->name);
-        $this->assertNull($category->description);
-        $this->assertTrue((bool)$category->is_active);
 
-        $category = Genre::create([
+        $category = CastMember::create([
             'name' => 'First',
-            'description' => null
+            'type' => CastMember::TYPE_ACTOR
         ]);
         $category->refresh();
-        $this->assertNull($category->description);
-
-        $category = Genre::create([
-            'name' => 'First',
-            'is_active' => false
-        ]);
-        $category->refresh();
-        $this->assertFalse($category->is_active);
+        $this->assertEquals($category->type, CastMember::TYPE_ACTOR);
 
     }
 
     public function testUpdate()
     {
-        $category = factory(Genre::class)->create([
-            'description' => 'First_description',
-            'is_active' => true
+        $category = factory(CastMember::class)->create([
+            'name' => 'First Actor',
+            'type' => CastMember::TYPE_ACTOR
         ]);
 
         $data = [
-            'name' => 'Name Update',
-            'description' => 'testes_description_update',
-            'is_active' => false
+            'name' => 'First Director',
+            'type' => CastMember::TYPE_DIRECTOR
         ];
         $category->update($data);
 
@@ -83,9 +73,9 @@ class GenreUnitTest extends TestCase
 
     public function testDelete()
     {
-        $category = factory(Genre::class)->create();
+        $category = factory(CastMember::class)->create();
         $category->delete();
 
-        $this->assertNull(Genre::find($category->id));
+        $this->assertNull(CastMember::find($category->id));
     }
 }

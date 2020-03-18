@@ -7,44 +7,26 @@ use App\Models\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class CategoryController extends BaseCrudController
 {
     private $rules = [
         'name' => 'required|max:255',
-        'is_active' => 'required|boolean'
+        'is_active' => 'boolean',
+        'description' => 'nullable'
     ];
 
-    public function index(Request $request)
+    protected function model()
     {
-        if ($request->has('only_trashed')) {
-           return Category::onlyTrashed()->get();
-        }
-
-        return Category::all();
+        return Category::class;
     }
 
-    public function store(Request $request)
+    protected function rulesStore()
     {
-        $this->validate($request, $this->rules);
-        $category = Category::create($request->all());
-        $category->refresh();
-        return $category;
+        return $this->rules;
     }
 
-    public function show(Category $category)
+    protected function rulesUpdate()
     {
-        return $category;
-    }
-
-    public function update(Request $request, Category $category)
-    {
-        $this->validate($request, $this->rules);
-        return $category->update($request->all());
-    }
-
-    public function destroy(Category $category)
-    {
-        $category->delete();
-        return response()->noContent(); //204
+        return $this->rules;
     }
 }

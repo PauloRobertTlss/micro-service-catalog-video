@@ -21,7 +21,7 @@ class CategoryStub extends Model
     public static function createTable()
     {
         \Schema::create('category_stubs', function (Blueprint $table) {
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->string('name');
             $table->text('description')->nullable();
             $table->boolean('is_active')->default(true);

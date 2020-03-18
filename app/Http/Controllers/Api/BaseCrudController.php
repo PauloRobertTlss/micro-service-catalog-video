@@ -9,12 +9,10 @@ use Illuminate\Http\Request;
 
 abstract class BaseCrudController extends Controller
 {
-    private $rules = [
-        'name' => 'required|max:255',
-        'is_active' => 'required|boolean'
-    ];
 
     protected abstract function model();
+    protected abstract function rulesStore();
+    protected abstract function rulesUpdate();
 
     public function index(Request $request)
     {
@@ -25,28 +23,41 @@ abstract class BaseCrudController extends Controller
         return $this->model()::all();
     }
 
-//    public function store(Request $request)
-//    {
-//        $this->validate($request, $this->rules);
-//        $category = $this->model()::create($request->all());
-//        $category->refresh();
-//        return $category;
-//    }
-//
-//    public function show(Category $category)
-//    {
-//        return $category;
-//    }
-//
-//    public function update(Request $request, Category $category)
-//    {
-//        $this->validate($request, $this->rules);
-//        return $category->update($request->all());
-//    }
-//
-//    public function destroy(Category $category)
-//    {
-//        $category->delete();
-//        return response()->noContent(); //204
-//    }
+    public function store(Request $request)
+    {
+        $validatedData = $this->validate($request, $this->rulesStore());
+
+        $model = $this->model()::create($validatedData);
+        $model->refresh();
+        return $model;
+    }
+
+    protected function findOrFail($id)
+    {
+        $model = $this->model();
+        $keyName = (new $model)->getRouteKeyName();
+        return $this->model()::where($keyName, $id)->firstOrFail();
+
+    }
+
+    public function show($id)
+    {
+        return $this->findOrFail($id);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $model = $this->findOrFail($id);
+        $validatedDate = $this->validate($request, $this->rulesUpdate());
+        $model->update($validatedDate);
+        $model->refresh();
+        return $model;
+    }
+
+    public function destroy($id)
+    {
+        $model = $this->findOrFail($id);
+        $model->delete();
+        return response()->noContent(); //204
+    }
 }

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6ad4567-efb5-4ecb-a2d7-1a0df600e682" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.prod.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.prod.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -429,7 +428,7 @@
       <workItem from="1584410586097" duration="6253000" />
       <workItem from="1584447981186" duration="186000" />
       <workItem from="1584456622872" duration="736000" />
-      <workItem from="1584493618712" duration="10775000" />
+      <workItem from="1584493618712" duration="10897000" />
     </task>
     <servers />
   </component>
@@ -466,7 +465,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86612000" />
+    <option name="totallyTimeSpent" value="86734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="-2" width="1875" height="1082" extended-state="6" />
@@ -994,8 +993,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

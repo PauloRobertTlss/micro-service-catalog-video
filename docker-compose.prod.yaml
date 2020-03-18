@@ -5,7 +5,7 @@ services:
   app:
     build: .
     container_name: app
-    entrypoint: dockerize -wait tcp://db:3006 --timeout 40s ./.docker/entrypoint.sh
+    entrypoint: dockerize -wait tcp://db:3306 --timeout 40s ./.docker/entrypoint.sh
     volumes:
       - .:/var/www
     networks:
@@ -42,7 +42,7 @@ services:
     restart: always
     tty: true
     ports:
-      - "3006:3006"
+      - "3306:3306"
     volumes:
       - ./.docker/dbdata:/var/lib/mysql
       - ./.docker/mysql:/docker-entrypoint-initdb.d

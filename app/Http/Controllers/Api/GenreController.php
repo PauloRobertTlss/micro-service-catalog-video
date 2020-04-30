@@ -12,8 +12,49 @@ class GenreController extends BaseCrudController
     private $rules = [
         'name' => 'required|max:255',
         'is_active' => 'boolean',
-        'description' => 'nullable'
+        'description' => 'nullable',
+        'categories_id' => 'required|array|exists:categories,id,deleted_at,NULL'
     ];
+
+    public function store(Request $request)
+    {
+        $validatedData = $this->validate($request, $this->rulesStore());
+
+        /** @var Video $model */
+        $self = $this;
+
+        $model = \DB::transaction(function () use ($self, $request, $validatedData) {
+            $model = $this->model()::create($validatedData);
+            $self->handleRelations($model, $request);
+            return $model;
+        });
+
+        $model->refresh();
+        return $model;
+    }
+
+    protected function handleRelations($genre, Request $request)
+    {
+        $genre->categories()->sync($request->get('categories_id'));
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        $validatedData = $this->validate($request, $this->rulesUpdate());
+        $model = $this->findOrFail($id);
+        $self = $this;
+
+        $model = \DB::transaction(function () use ($self,$model, $request, $validatedData) {
+            $model->update($validatedData);
+            $self->handleRelations($model, $request);
+            return $model;
+        });
+
+        $model->refresh();
+        return $model;
+
+    }
 
 
     protected function model()

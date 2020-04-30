@@ -11,6 +11,12 @@ class GenresTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Models\Genre::class, 10)->create();
+        $categories = \App\Models\Category::all();
+        factory(\App\Models\Genre::class, 100)
+            ->create()
+            ->each(function ($genre) use ($categories) {
+                $categoriesId = $categories->random(6)->pluck('id')->toArray();
+                $genre->categories()->attach($categoriesId);
+            });
     }
 }

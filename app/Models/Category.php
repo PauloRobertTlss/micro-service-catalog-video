@@ -29,4 +29,16 @@ class Category extends Model
 
     public $incrementing = false;
 
+
+    public function videos()
+    {
+        return $this->belongsToMany(Video::class);
+    }
+
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class);
+    }
+
+
 }

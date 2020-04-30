@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6ad4567-efb5-4ecb-a2d7-1a0df600e682" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.docker/app/.env.testing" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/app/.env.testing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.testing" beforeDir="false" afterPath="$PROJECT_DIR$/.env.testing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.testing.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.testing.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/micro-videos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/micro-videos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/BaseCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/BaseCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GenreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GenreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Genre.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Genre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/GenresTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/GenresTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/GenreControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/GenreControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/CategoryUnitTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,93 +42,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+        <entry file="file://$PROJECT_DIR$/.env.testing">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="348">
+              <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/BaseCrudControllerTest.php">
+        <entry file="file://$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesProdTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="195">
+              <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/CastMemberControllerTest.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoControllerTest.php">
+        <entry file="file://$PROJECT_DIR$/tests/Traits/TestStorages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="316" column="53" lean-forward="true" selection-start-line="316" selection-start-column="53" selection-end-line="316" selection-end-column="53" />
-              <folding>
-                <element signature="e#54#99#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DOCKER-CMD.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Unit/Rules/GenresHasCategoriesRuleUnitTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="122" column="51" selection-start-line="120" selection-start-column="8" selection-end-line="122" selection-end-column="51" />
-              <folding>
-                <element signature="e#38#77#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/GenreControllerTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4530">
-              <caret line="312" selection-start-line="312" selection-end-line="312" />
-              <folding>
-                <element signature="e#54#102#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/Models/VideoTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-              <folding>
-                <element signature="e#40#64#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env.example">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="120">
+              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -150,8 +71,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" selection-start-line="46" selection-end-line="49" selection-end-column="79" />
+            <state relative-caret-position="411">
+              <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -170,6 +100,7 @@
       <find>\Re</find>
       <find>method</find>
       <find>mock</find>
+      <find>FILESYSTEM_DRIVER</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -186,13 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Dockerfile.prod" />
-        <option value="$PROJECT_DIR$/docker-compose.prod.yaml" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/database/factories/VideoFactory.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_27_023115_create_category_video_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_27_023452_create_genre_video_table.php" />
-        <option value="$PROJECT_DIR$/tests/Exceptions/TestStoreException.php" />
         <option value="$PROJECT_DIR$/app/Models/Genre.php" />
         <option value="$PROJECT_DIR$/app/Models/Category.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_03_28_031631_create_category_genre_table.php" />
@@ -205,7 +129,6 @@
         <option value="$PROJECT_DIR$/app/Rules/GenresHasCategoriesRules.php" />
         <option value="$PROJECT_DIR$/tests/Unit/Rules/GenresHasCategoriesRuleUnitTest.php" />
         <option value="$PROJECT_DIR$/tests/Feature/Models/VideoTest.php" />
-        <option value="$PROJECT_DIR$/.env.testing.example" />
         <option value="$PROJECT_DIR$/tests/Stubs/Models/VideoStub.php" />
         <option value="$PROJECT_DIR$/tests/Unit/Models/CategoryUnitTest.php" />
         <option value="$PROJECT_DIR$/tests/Unit/Models/VideoUnitTest.php" />
@@ -226,17 +149,25 @@
         <option value="$PROJECT_DIR$/database/migrations/2020_03_27_011546_create_videos_table.php" />
         <option value="$PROJECT_DIR$/tests/Feature/Models/Video/BaseVideoTestCase.php" />
         <option value="$PROJECT_DIR$/tests/Feature/Models/Video/VideoCrudTest.php" />
-        <option value="$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php" />
         <option value="$PROJECT_DIR$/app/Models/Traits/UploadFiles.php" />
         <option value="$PROJECT_DIR$/tests/Stubs/Models/UploadFilesStub.php" />
         <option value="$PROJECT_DIR$/tests/Feature/Models/Traits/UploadFilesTest.php" />
         <option value="$PROJECT_DIR$/app/Models/Video.php" />
         <option value="$PROJECT_DIR$/tests/Feature/Models/Video/VideoUploadTest.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
-        <option value="$PROJECT_DIR$/.env.example" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/.env.testing" />
         <option value="$PROJECT_DIR$/DOCKER-CMD.md" />
+        <option value="$PROJECT_DIR$/.env.example" />
+        <option value="$PROJECT_DIR$/.docker/app/.env" />
+        <option value="$PROJECT_DIR$/.env.testing.example" />
+        <option value="$PROJECT_DIR$/phpunit.xml" />
+        <option value="$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesUnitTest.php" />
+        <option value="$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesProdTest.php" />
+        <option value="$PROJECT_DIR$/.env.testing" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/.docker/app/.env.testing" />
+        <option value="$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php" />
+        <option value="$PROJECT_DIR$/tests/Traits/TestStorages.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -246,6 +177,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers />
   </component>
@@ -386,13 +318,56 @@
             <path>
               <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
               <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name=".docker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
               <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials" type="462c0819:PsiDirectoryNode" />
+              <item name=".docker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Prod" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Prod" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Prod" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Traits" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Traits" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-videos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-videos" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Unit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -407,22 +382,22 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/storage/credentials/gcp" />
-      <recent name="$PROJECT_DIR$/tests/Feature/Models/Video" />
-      <recent name="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/Video" />
-      <recent name="$PROJECT_DIR$/tests/Traits" />
-      <recent name="$PROJECT_DIR$/tests/Unit/Models" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/Feature/Models" />
       <recent name="$PROJECT_DIR$/tests/Unit/Models" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/tests/Stubs/Models" />
       <recent name="$PROJECT_DIR$/app/Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Prod/Models/Traits" />
+      <recent name="$PROJECT_DIR$/storage/credentials/gcp" />
+      <recent name="$PROJECT_DIR$/tests/Feature/Models/Video" />
+      <recent name="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/Video" />
+      <recent name="$PROJECT_DIR$/tests/Traits" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -437,29 +412,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.VideoUploadTest.testUpdateIfRollbackFiles">
+  <component name="RunManager" selected="PHPUnit.UploadFilesProdTest.testUploadFiles">
     <configuration name="CastMemberControllerTest.testInvalidateData" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner class="Tests\Feature\Http\Controllers\Api\CastMemberControllerTest" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/CastMemberControllerTest.php" method="testInvalidateData" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UploadFilesTest.testMakeOldFieldsOnSaving" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Models\Traits\UploadFilesTest" file="$PROJECT_DIR$/tests/Feature/Models/Traits/UploadFilesTest.php" method="testMakeOldFieldsOnSaving" scope="Method" />
+    <configuration name="UploadFilesProdTest.testUploadFile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\Traits\UploadFilesProdTest" file="$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesProdTest.php" method="testUploadFile" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UploadFilesTest.testMakeOldFilesNullOnSaving" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Models\Traits\UploadFilesTest" file="$PROJECT_DIR$/tests/Feature/Models/Traits/UploadFilesTest.php" method="testMakeOldFilesNullOnSaving" scope="Method" />
+    <configuration name="UploadFilesProdTest.testUploadFiles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\Traits\UploadFilesProdTest" file="$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesProdTest.php" method="testUploadFiles" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="VideoTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Models\VideoTest" file="$PROJECT_DIR$/tests/Feature/Models/VideoTest.php" scope="Class" />
+    <configuration name="UploadFilesUnitTest.testUploadFile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\Traits\UploadFilesUnitTest" file="$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php" method="testUploadFile" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UploadFilesUnitTest.testUploadFiles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\Traits\UploadFilesUnitTest" file="$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php" method="testUploadFiles" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="VideoUploadTest.testUpdateIfRollbackFiles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Models\Video\VideoUploadTest" file="$PROJECT_DIR$/tests/Feature/Models/Video/VideoUploadTest.php" method="testUpdateIfRollbackFiles" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="VideoUploadTest.testUpdateWithFiles" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Models\Video\VideoUploadTest" file="$PROJECT_DIR$/tests/Feature/Models/Video/VideoUploadTest.php" method="testUpdateWithFiles" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -468,11 +443,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UploadFilesProdTest.testUploadFiles" />
+        <item itemvalue="PHPUnit.UploadFilesProdTest.testUploadFile" />
+        <item itemvalue="PHPUnit.UploadFilesUnitTest.testUploadFile" />
+        <item itemvalue="PHPUnit.UploadFilesUnitTest.testUploadFiles" />
         <item itemvalue="PHPUnit.VideoUploadTest.testUpdateIfRollbackFiles" />
-        <item itemvalue="PHPUnit.VideoUploadTest.testUpdateWithFiles" />
-        <item itemvalue="PHPUnit.UploadFilesTest.testMakeOldFilesNullOnSaving" />
-        <item itemvalue="PHPUnit.UploadFilesTest.testMakeOldFieldsOnSaving" />
-        <item itemvalue="PHPUnit.VideoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -529,44 +504,44 @@
       <workItem from="1586832773002" duration="650000" />
       <workItem from="1586961638700" duration="866000" />
       <workItem from="1587998735563" duration="274000" />
-      <workItem from="1588255171921" duration="157000" />
+      <workItem from="1588255171921" duration="4405000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UploadFilesTest_testMakeOldFieldsOnSaving - 2020.04.10 at 00h 09m 21s.xml">
-      <configuration name="UploadFilesTest.testMakeOldFieldsOnSaving" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesProdTest_testUploadFile - 2020.04.30 at 11h 38m 07s.xml">
+      <configuration name="UploadFilesProdTest.testUploadFile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UploadFilesTest_testMakeOldFieldsOnSaving - 2020.04.10 at 00h 10m 04s.xml">
-      <configuration name="UploadFilesTest.testMakeOldFieldsOnSaving" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesUnitTest_testUploadFile - 2020.04.30 at 11h 41m 05s.xml">
+      <configuration name="UploadFilesUnitTest.testUploadFile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="VideoTest - 2020.04.10 at 00h 11m 44s.xml">
-      <configuration name="VideoTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesUnitTest_testUploadFile - 2020.04.30 at 11h 45m 13s.xml">
+      <configuration name="UploadFilesUnitTest.testUploadFile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UploadFilesTest_testMakeOldFieldsOnSaving - 2020.04.10 at 00h 13m 02s.xml">
-      <configuration name="UploadFilesTest.testMakeOldFieldsOnSaving" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesUnitTest_testUploadFile - 2020.04.30 at 12h 10m 30s.xml">
+      <configuration name="UploadFilesUnitTest.testUploadFile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UploadFilesTest_testMakeOldFieldsOnSaving - 2020.04.10 at 00h 13m 32s.xml">
-      <configuration name="UploadFilesTest.testMakeOldFieldsOnSaving" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesUnitTest_testUploadFile - 2020.04.30 at 12h 13m 01s.xml">
+      <configuration name="UploadFilesUnitTest.testUploadFile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UploadFilesTest_testMakeOldFieldsOnSaving - 2020.04.10 at 00h 13m 47s.xml">
-      <configuration name="UploadFilesTest.testMakeOldFieldsOnSaving" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesProdTest_testUploadFile - 2020.04.30 at 12h 15m 01s.xml">
+      <configuration name="UploadFilesProdTest.testUploadFile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UploadFilesTest_testMakeOldFilesNullOnSaving - 2020.04.10 at 00h 13m 53s.xml">
-      <configuration name="UploadFilesTest.testMakeOldFilesNullOnSaving" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesProdTest_testUploadFiles - 2020.04.30 at 12h 15m 20s.xml">
+      <configuration name="UploadFilesProdTest.testUploadFiles" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="VideoUploadTest_testUpdateWithFiles - 2020.04.10 at 00h 22m 35s.xml">
-      <configuration name="VideoUploadTest.testUpdateWithFiles" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesProdTest_testUploadFiles - 2020.04.30 at 12h 16m 24s.xml">
+      <configuration name="UploadFilesProdTest.testUploadFiles" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="VideoUploadTest_testUpdateIfRollbackFiles - 2020.04.10 at 00h 30m 58s.xml">
-      <configuration name="VideoUploadTest.testUpdateIfRollbackFiles" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesProdTest_testUploadFiles - 2020.04.30 at 12h 17m 23s.xml">
+      <configuration name="UploadFilesProdTest.testUploadFiles" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="VideoUploadTest_testUpdateIfRollbackFiles - 2020.04.13 at 00h 08m 41s.xml">
-      <configuration name="VideoUploadTest.testUpdateIfRollbackFiles" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UploadFilesProdTest_testUploadFiles - 2020.04.30 at 12h 22m 50s.xml">
+      <configuration name="UploadFilesProdTest.testUploadFiles" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164451000" />
+    <option name="totallyTimeSpent" value="168699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="-2" width="1875" height="1082" extended-state="6" />
@@ -578,7 +553,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.41762853" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972662" weight="0.48898217" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972662" visible="true" weight="0.43336833" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39979014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -741,99 +716,30 @@
           <line>15</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php</url>
+          <line>122</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php</url>
+          <line>119</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php</url>
+          <line>32</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesProdTest.php</url>
+          <line>45</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.docker/mysql/initdb.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/Models/CategoryUnitTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/app/public/videos/dbddf7e4-35f1-4b7d-bbed-c5f7c4405627/w0FnilG7Dsrj5KyJ9O5cAAimt4JMrOPJt44M7fY9.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/GenreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#45#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CastMemberController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Traits/TestValidations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Traits/TestUploads.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-          <folding>
-            <element signature="e#58#105#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="10796" column="9" lean-forward="true" selection-start-line="10796" selection-start-column="9" selection-end-line="10796" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/BaseCrudController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="e#44#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Validation/ValidatesRequests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -909,13 +815,6 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_27_023115_create_category_video_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env.testing.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/Video/BaseVideoControllerTestCase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -934,13 +833,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/storage/framework/testing/disks/video_local/e318d245-4722-4233-9cc6-8d3eefd760f6/AIIP5KAZt6OPlBTSuHfn97teiswjKPz0kXz4gV9C.jpeg" />
-    <entry file="file://$PROJECT_DIR$/phpunit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/Models/Video/VideoCrudTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -1000,16 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Traits/UploadFiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="76" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="76" />
-          <folding>
-            <element signature="e#38#77#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Stubs/Models/UploadFilesStub.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1030,23 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="e#45#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/Models/Traits/UploadFilesTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -1054,20 +919,6 @@
           <folding>
             <element signature="e#48#87#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env.testing">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="79" selection-start-line="55" selection-start-column="79" selection-end-line="55" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1111,24 +962,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" selection-start-line="46" selection-end-line="49" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/VideoControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="316" column="53" lean-forward="true" selection-start-line="316" selection-start-column="53" selection-end-line="316" selection-end-column="53" />
+          <caret line="316" column="53" selection-start-line="316" selection-start-column="53" selection-end-line="316" selection-end-column="53" />
           <folding>
             <element signature="e#54#99#0#PHP" expanded="true" />
           </folding>
@@ -1139,9 +976,154 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="15">
-            <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+            <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.docker/app/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Traits/UploadFiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#38#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.testing.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/google/cloud-core/src/Upload/MultipartUploader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/google/cloud-storage/src/Bucket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="292" selection-start-line="292" selection-end-line="292" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/superbalist/flysystem-google-storage/src/GoogleStorageAdapter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.docker/app/.env.testing">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/google/cloud-core/src/RequestWrapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="205" selection-start-line="205" selection-end-line="205" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.testing">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Prod/Models/Traits/UploadFilesProdTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/Models/Traits/UploadFilesUnitTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#45#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Traits/TestStorages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>

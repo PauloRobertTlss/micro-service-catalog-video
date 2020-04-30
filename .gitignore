@@ -5,6 +5,8 @@
 /vendor
 /.docker/dbdata
 /.idea/
+/bootstrap/cache/
+/storage/logs/
 .env
 .testing
 .env.backup

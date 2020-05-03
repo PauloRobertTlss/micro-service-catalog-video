@@ -19,6 +19,7 @@ steps:
     - GOOGLE_CLOUD_KEY_FILE=codeeductiontests-92f7b42b6c8a.json
     - GOOGLE_CLOUD_STORAGE_BUCKET=cloud_tlss_bucket
     - GOOGLE_CLOUD_STORAGE_API_URI=https://storage.cloud.google.com/cloud_tlss_bucket
+    - TESTING_PROD=true
 
 - id: "[GCR] - Rodando docker ps"
   name: 'gcr.io/cloud-builders/docker'

@@ -1,8 +1,8 @@
 steps:
 
 - id: "[GCR] - decrypt credentials - GCS"
-    name: 'gcr.io/cloud-builders/docker'
-    args:
+  name: 'gcr.io/cloud-builders/docker'
+  args:
       - kms
       - decrypt
       - --ciphertext-file=./storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.enc

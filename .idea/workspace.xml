@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloudbuild.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="37" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="37" />
+            <state relative-caret-position="142">
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -71,15 +71,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -397,19 +388,19 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/credentials/gcp/origin" />
+      <recent name="$PROJECT_DIR$/storage/credentials/gcp" />
+      <recent name="$PROJECT_DIR$/tests/Prod/Models/Traits" />
+      <recent name="$PROJECT_DIR$/tests/Feature/Models/Video" />
+      <recent name="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/Video" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/Feature/Models" />
       <recent name="$PROJECT_DIR$/tests/Unit/Models" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/tests/Stubs/Models" />
       <recent name="$PROJECT_DIR$/app/Models" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/storage/credentials/gcp" />
-      <recent name="$PROJECT_DIR$/tests/Prod/Models/Traits" />
-      <recent name="$PROJECT_DIR$/tests/Feature/Models/Video" />
-      <recent name="$PROJECT_DIR$/tests/Feature/Http/Controllers/Api/Video" />
-      <recent name="$PROJECT_DIR$/tests/Traits" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -517,7 +508,7 @@
       <workItem from="1586961638700" duration="866000" />
       <workItem from="1587998735563" duration="274000" />
       <workItem from="1588255171921" duration="9646000" />
-      <workItem from="1588476755575" duration="3819000" />
+      <workItem from="1588476755575" duration="5055000" />
     </task>
     <servers />
   </component>
@@ -554,7 +545,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177759000" />
+    <option name="totallyTimeSpent" value="178995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="-2" width="1875" height="1082" extended-state="6" />
@@ -1125,8 +1116,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cloudbuild.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="37" />
+        <state relative-caret-position="142">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
         </state>
       </provider>
     </entry>

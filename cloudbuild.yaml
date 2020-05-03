@@ -1,8 +1,24 @@
 steps:
 
-- id: "[OWN]Rodando docker-composer"
-  name: 'gcr.io/$PROJECT_ID/docker-compose'
+- id: "[GCR] - decrypt credentials - GCS"
+    name: 'gcr.io/cloud-builders/docker'
+    args:
+      - kms
+      - decrypt
+      - --ciphertext-file=./storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.enc
+      - --plaintext-file=./storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.json
+      - --location=global
+      - --keyring=7ebb6041-2b18-478e-a2c6-8196f34b50d8
+      - --key=service_account
+
+- id: "[OWN] Rodando docker-composer"
+  name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
   args: ['-f', 'docker-compose.prod.yaml','up','-d']
+  env:
+    - GOOGLE_CLOUD_PROJECT_ID=$PROJECT_ID
+    - GOOGLE_CLOUD_KEY_FILE=codeeductiontests-92f7b42b6c8a.json
+    - GOOGLE_CLOUD_STORAGE_BUCKET=cloud_tlss_bucket
+    - GOOGLE_CLOUD_STORAGE_API_URI=https://storage.cloud.google.com/cloud_tlss_bucket
 
 - id: "[GCR] - Rodando docker ps"
   name: 'gcr.io/cloud-builders/docker'

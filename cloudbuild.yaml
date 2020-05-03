@@ -41,6 +41,10 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec','-t','app','cp','.env.testing.example','.env.testing']
 
+- id: "[OWN] - Clear cache - composer"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','cp','.env.testing.example','.env.testing']
+
 - id: "[OWN] - Rodando key:generate"
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec','-t','app','php','/var/www/artisan','key:generate']

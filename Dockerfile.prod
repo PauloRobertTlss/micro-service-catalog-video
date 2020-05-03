@@ -36,6 +36,8 @@ RUN rm -rf /var/www/html
 
 #copiar tudos os arquivos do as build.
 COPY --from=build /var/www .
+RUN chmod -R 775 storage
+RUN chmod -R 777 bootstrap/cache
 
 EXPOSE 9000
 ENTRYPOINT ["php-fpm"]

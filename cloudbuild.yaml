@@ -1,7 +1,7 @@
 steps:
 
 - id: "[GCR] - decrypt credentials - GCS"
-  name: 'gcr.io/cloud-builders/docker'
+  name: 'gcr.io/cloud-builders/gcloud'
   args:
       - kms
       - decrypt

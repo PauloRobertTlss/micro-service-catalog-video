@@ -4,6 +4,7 @@ namespace Tests\Feature\Http\Controllers\Api;
 
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\GenreController;
+use App\Http\Resources\GenreResource;
 use App\Models\Category;
 use App\Models\Genre;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -11,15 +12,34 @@ use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\Request;
 use Tests\Exceptions\TestStoreException;
 use Tests\TestCase;
+use Tests\Traits\TestResources;
 use Tests\Traits\TestStore;
 use Tests\Traits\TestValidations;
 
 class GenreControllerTest extends TestCase
 {
     use DatabaseMigrations;
-    use TestValidations, TestStore;
+    use TestValidations, TestStore, TestResources;
 
     private $genre;
+    private $fieldsSerialized = [
+        'id',
+        'name',
+        'is_active',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+        'categories' => [
+            '*' => [
+                'id',
+                'name',
+                'description',
+                'is_active',
+                'created_at',
+                'updated',
+                'deleted_at',
+            ]
+        ]];
 
     protected function setUp(): void
     {
@@ -38,7 +58,15 @@ class GenreControllerTest extends TestCase
 
         $response
             ->assertStatus(200)
-            ->assertJson([$genre->toArray()]);
+            ->assertJsonStructure([
+                'data' => [
+                    '*' => $this->fieldsSerialized
+                ],
+                'meta' => [],
+                'links' => [],
+            ]);
+
+        $this->assertResource($response, GenreResource::collection(collect([$this->genre])));
     }
 
     public function testShow()
@@ -48,18 +76,23 @@ class GenreControllerTest extends TestCase
 
         $response
             ->assertStatus(200)
-            ->assertJson($genre->toArray());
+            ->assertJsonStructure([
+                'data' => $this->fieldsSerialized
+                    ])
+            ->assertJsonFragment($this->genre->toArray());
+
+        $this->assertResource($response, new GenreResource($this->genre));
     }
 
     public function testInvalidateData()
     {
-        $rules = ['name','is_active'];
+        $rules = ['name', 'is_active'];
 
-        $response = $this->json('POST',route('genres.store'), []);
+        $response = $this->json('POST', route('genres.store'), []);
 
         $this->assertInvalidateData($response);
 
-        $response = $this->json('POST',route('genres.store'), [
+        $response = $this->json('POST', route('genres.store'), [
             'name' => str_repeat('a', 256),
             'is_active' => "a"
         ]);
@@ -67,11 +100,11 @@ class GenreControllerTest extends TestCase
         $this->assertInvalidateMaxAndBoolean($response);
 
         $genre = factory(Genre::class)->create();
-        $response = $this->json('PUT',route('genres.update', ['genre' => $genre->id]), []);
+        $response = $this->json('PUT', route('genres.update', ['genre' => $genre->id]), []);
 
         $this->assertInvalidateData($response);
 
-        $response = $this->json('PUT',route('genres.update', ['genre' => $genre->id]), [
+        $response = $this->json('PUT', route('genres.update', ['genre' => $genre->id]), [
             'name' => str_repeat('a', 256),
             'is_active' => "a"
         ]);
@@ -133,7 +166,7 @@ class GenreControllerTest extends TestCase
             'updated_at'
         ]);
 
-        $this->assertHasCategory($response->json('id'), $categoryId);
+        $this->assertHasCategory($response->json('data.id'), $categoryId);
 
         $data = [
             'name' => 'tests',
@@ -161,7 +194,7 @@ class GenreControllerTest extends TestCase
             'description' => null
         ]);
 
-        $genre = Genre::find($response->json('id'));
+        $genre = Genre::find($response->json('data.id'));
 
         $response->assertStatus(200)
             ->assertJson($genre->toArray());
@@ -174,8 +207,8 @@ class GenreControllerTest extends TestCase
     public function assertHasCategory($genreId, $categoryId)
     {
         $this->assertDatabaseHas('category_genre', [
-           'genre_id' => $genreId,
-           'category_id' => $categoryId
+            'genre_id' => $genreId,
+            'category_id' => $categoryId
         ]);
     }
 
@@ -193,7 +226,7 @@ class GenreControllerTest extends TestCase
 
         $this->assertDatabaseHas('category_genre', [
             'category_id' => $categoriesId[0],
-            'genre_id'=> $response->json('id')
+            'genre_id' => $response->json('data.id')
         ]);
 
         $sendData = [
@@ -201,21 +234,20 @@ class GenreControllerTest extends TestCase
             'categories_id' => [$categoriesId[1], $categoriesId[2]]
         ];
 
-        $response = $this->json('PUT', route('genres.update', ['genre' => $response->json('id')]), $sendData);
+        $response = $this->json('PUT', route('genres.update', ['genre' => $response->json('data.id')]), $sendData);
 
 
         $this->assertDatabaseMissing('category_genre', [
             'category_id' => $categoriesId[0],
-            'genre_id'=> $response->json('id')
+            'genre_id' => $response->json('data.id')
         ]);
 
         $this->assertDatabaseHas('category_genre', [
             'category_id' => $categoriesId[1],
-            'genre_id'=> $response->json('id')
+            'genre_id' => $response->json('data.id')
         ]);
 
     }
-
 
 
     public function testDestroy()
@@ -237,7 +269,7 @@ class GenreControllerTest extends TestCase
         $response->assertStatus(422)
             ->assertJsonValidationErrors(['name'])
             ->assertJsonFragment([
-                \Lang::get('validation.required',['attribute' => 'name'])
+                \Lang::get('validation.required', ['attribute' => 'name'])
             ]);
     }
 
@@ -246,9 +278,9 @@ class GenreControllerTest extends TestCase
         $response->assertStatus(422)
             ->assertJsonValidationErrors(['name'])
             ->assertJsonFragment([
-                \Lang::get('validation.max.string',['attribute' => 'name', 'max' => 255])
+                \Lang::get('validation.max.string', ['attribute' => 'name', 'max' => 255])
             ])->assertJsonFragment([
-                \Lang::get('validation.boolean',['attribute' => 'is active'])
+                \Lang::get('validation.boolean', ['attribute' => 'is active'])
             ]);
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\GenreResource;
 use App\Models\Genre;
 use Illuminate\Http\Request;
 
@@ -30,7 +31,8 @@ class GenreController extends BaseCrudController
         });
 
         $model->refresh();
-        return $model;
+        $resource = $this->resource();
+        return new $resource($model);
     }
 
     protected function handleRelations($genre, Request $request)
@@ -51,8 +53,8 @@ class GenreController extends BaseCrudController
             return $model;
         });
 
-        $model->refresh();
-        return $model;
+        $resource = $this->resource();
+        return new $resource($model);
 
     }
 
@@ -70,5 +72,15 @@ class GenreController extends BaseCrudController
     protected function rulesUpdate()
     {
         return $this->rules;
+    }
+
+    protected function resource()
+    {
+        return GenreResource::class;
+    }
+
+    protected function resourceCollection()
+    {
+        return $this->resource();
     }
 }

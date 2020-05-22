@@ -20,7 +20,7 @@ class Category extends Model
 
     protected $casts = [
         'id' => 'string',
-        'is_active' => 'bool'
+        'is_active' => 'boolean'
     ];
 
     protected $dates = [

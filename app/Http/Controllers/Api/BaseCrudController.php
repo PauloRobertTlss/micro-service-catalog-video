@@ -4,21 +4,33 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 
 abstract class BaseCrudController extends Controller
 {
+    protected $paginationSize = 15;
 
     protected abstract function model();
     protected abstract function rulesStore();
     protected abstract function rulesUpdate();
+    protected abstract function resource();
+    protected abstract function resourceCollection();
 
     public function index(Request $request)
     {
+
         if ($request->has('only_trashed')) {
            return $this->model()::onlyTrashed()->get();
         }
 
-        return $this->model()::all();
+        $data = !$this->paginationSize ? $this->model()::all() : $this->model()::paginate($this->paginationSize);
+        $resourceCollection = $this->resourceCollection();
+
+        $refClass = new \ReflectionClass($this->resourceCollection());
+        $hasSub = $refClass->isSubclassOf(ResourceCollection::class);
+
+        return $hasSub ? new $resourceCollection($data) : $resourceCollection::collection($data);
+
     }
 
     public function store(Request $request)
@@ -27,7 +39,9 @@ abstract class BaseCrudController extends Controller
 
         $model = $this->model()::create($validatedData);
         $model->refresh();
-        return $model;
+
+        $resource = $this->resource();
+        return new $resource($model);
     }
 
     protected function findOrFail($id)
@@ -40,7 +54,9 @@ abstract class BaseCrudController extends Controller
 
     public function show($id)
     {
-        return $this->findOrFail($id);
+        $model =  $this->findOrFail($id);
+        $resource = $this->resource();
+        return new $resource($model);
     }
 
     public function update(Request $request, $id)
@@ -49,7 +65,8 @@ abstract class BaseCrudController extends Controller
         $validatedDate = $this->validate($request, $this->rulesUpdate());
         $model->update($validatedDate);
         $model->refresh();
-        return $model;
+        $resource = $this->resource();
+        return new $resource($model);
     }
 
     public function destroy($id)

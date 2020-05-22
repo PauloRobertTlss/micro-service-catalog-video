@@ -4,7 +4,7 @@
     'name' => 'Laravel',
     'env' => 'testing',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'http://localhost:8000',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
@@ -313,17 +313,19 @@
       array (
         'driver' => 'local',
         'root' => '/opt/project/storage/app',
+        'url' => 'http://localhost:8000/storage',
       ),
       'video_local' => 
       array (
         'driver' => 'local',
         'root' => '/opt/project/storage/app/public/videos',
+        'url' => 'http://localhost:8000/storage/videos',
       ),
       'public' => 
       array (
         'driver' => 'local',
         'root' => '/opt/project/storage/app/public',
-        'url' => 'http://localhost/storage',
+        'url' => 'http://localhost:8000/storage',
         'visibility' => 'public',
       ),
       's3' => 
@@ -339,7 +341,7 @@
       array (
         'driver' => 'gcs',
         'project_id' => 'codeeductiontests',
-        'key_file' => '/opt/project/storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.json',
+        'key_file' => '/opt/project/storage/credentials/gcp/codeeductiontests-92f7b42b6c8a.enc',
         'bucket' => 'code-micro-video',
         'path_prefix' => NULL,
         'storage_api_uri' => 'https://storage.cloud.google.com/code-micro-video',

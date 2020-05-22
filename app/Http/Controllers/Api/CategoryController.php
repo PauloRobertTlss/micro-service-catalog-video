@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -28,5 +29,15 @@ class CategoryController extends BaseCrudController
     protected function rulesUpdate()
     {
         return $this->rules;
+    }
+
+    protected function resource()
+    {
+        return CategoryResource::class;
+    }
+
+    protected function resourceCollection()
+    {
+        return $this->resource();
     }
 }

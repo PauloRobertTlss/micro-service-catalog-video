@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\VideoResource;
 use App\Models\Video;
 use App\Rules\GenresHasCategoriesRules;
 use Illuminate\Http\Request;
@@ -26,7 +27,10 @@ class VideoController extends BaseCrudController
                 'array',
                 'exists:genres,id,deleted_at,NULL'
             ],
-            'video_file' => 'mimetypes:video/mp4|max:1024'
+            'thumb_file' => 'image|max:' . Video::THUMB_FILE_MAX_SIZE,
+            'banner_file' => 'image|max:' . Video::BANNER_FILE_MAX_SIZE,
+            'trailer_file' => 'mimetypes:video/mp4|max:' . Video::TRAILER_FILE_MAX_SIZE,
+            'video_file' => 'mimetypes:video/mp4|max:'. Video::VIDEO_FILE_MAX_SIZE
         ];
 
     }
@@ -50,7 +54,9 @@ class VideoController extends BaseCrudController
         $model = $this->model()::create($validatedData);
 
         $model->refresh();
-        return $model;
+        $resource = $this->resource();
+        return new $resource($model);
+
     }
 
     public function update(Request $request, $id)
@@ -62,7 +68,9 @@ class VideoController extends BaseCrudController
 
         $model->update($validatedData);
         $model->refresh();
-        return $model;
+        $resource = $this->resource();
+        return new $resource($model);
+
 
     }
 
@@ -79,5 +87,15 @@ class VideoController extends BaseCrudController
     protected function rulesUpdate()
     {
         return $this->rules;
+    }
+
+    protected function resource()
+    {
+      return VideoResource::class;
+    }
+
+    protected function resourceCollection()
+    {
+        return $this->resource();
     }
 }

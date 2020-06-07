@@ -8,7 +8,7 @@ import {Link as RouterLink} from 'react-router-dom';
 import Location from 'history';
 import routes from '../routes';
 import RouteParser from 'route-parser';
-import {Container} from "@material-ui/core";
+import {Box, Container} from "@material-ui/core";
 
 const breadcrumbNameMap: { [key: string]: string } = {};
 
@@ -93,11 +93,13 @@ export default function Breadcrumbs() {
 
     return (
         <Container>
+            <Box paddingBottom={'9px'}>
             <Route>
                 {
                     ({location}: { location: Location }) => makeBreadcrumb(location)
                 }
             </Route>
+            </Box>
         </Container>
     );
 }

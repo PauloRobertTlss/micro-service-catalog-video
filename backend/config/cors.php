@@ -1,6 +1,5 @@
 <?php
 
-
 $origins = env('CORS_ORIGINS', []);
 
 return [
@@ -24,7 +23,9 @@ return [
      * You can enable CORS for 1 or multiple paths.
      * Example: ['api/*']
      */
-    'paths' => ['api/*'],
+    'paths' => [
+        'api/*'
+    ],
 
     /*
     * Matches the request method. `[*]` allows all methods.
@@ -34,8 +35,7 @@ return [
     /*
      * Matches the request origin. `[*]` allows all origins. Wildcards can be used, eg `*.mydomain.com`
      */
-
-    'allowed_origins' => explode(",", $origins),
+    'allowed_origins' => ['*'],
 
     /*
      * Patterns that can be used with `preg_match` to match the origin.

@@ -65,6 +65,7 @@ const Table = (props: Props) => {
     // }, [count]); //observar infomações não há limits
 
     return (
+
         <MUIDataTable
             columns={columnsDefinition}
             title={'listagem de membros de elenco'}

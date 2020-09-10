@@ -2,12 +2,15 @@ import * as React from 'react';
 import {Page} from "../../components/Page";
 import {Box, Fab} from "@material-ui/core";
 import Form from './Form/Form'
-
+import {useParams} from "react-router";
 
 const PageForm = () => {
+    const {id} = useParams();
+
     return (
 
-        <Page title={"Cadastro categorias"}>
+
+        <Page title={id ? "Cadastro categorias" : "Editar categoria"}>
             <Box>
 
             <Form/>

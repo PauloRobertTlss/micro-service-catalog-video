@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles, Theme, createStyles} from '@material-ui/core/styles';
+import {makeStyles, Theme, createStyles, SimplePaletteColorOptions} from '@material-ui/core/styles';
 import Link, {LinkProps} from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import UiBreadcrumbs from '@material-ui/core/Breadcrumbs';
@@ -21,12 +21,12 @@ const useStyles = makeStyles((theme: Theme) =>
             flexDirection: 'column',
         },
         linkRouter: {
-            color: "#4db5ab",
+            color: theme.palette.secondary.main,
             "&:focus, &:active": {
-                color: "#4db5ab",
+                color: theme.palette.secondary.main,
             },
             "&:hover": {
-                color: "#055a52"
+                color: theme.palette.secondary.dark
             },
             "li": {
                 backgroundColor: "whiteOff",

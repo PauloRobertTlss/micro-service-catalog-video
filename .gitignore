@@ -3,3 +3,4 @@
 .docker/dbdata/*
 .docker/dbdata
 .npm-cache/
+backend/bootstrap/

@@ -38,7 +38,7 @@ const routes: CustomRouteProps[] = [
         slug: 'categories.edit',
         label: 'Editar categoria',
         path: '/categories/:id/edit',
-        component: CategoryList,
+        component: CategoryCreate,
         exact: true
     },
     {

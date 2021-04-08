@@ -30,6 +30,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 #COPY . /var/www
 
 
-EXPOSE 9000
+EXPOSE 9000 4200
 
 ENTRYPOINT ["php-fpm"]

@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Str;
-
+echo env('DB_CONNECTION', 'mysql');
+echo env('DB_CONNECTION', 'mysql');
+echo env('DB_CONNECTION', 'mysql');
 return [
 
     /*

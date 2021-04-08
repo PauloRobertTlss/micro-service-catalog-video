@@ -1,14 +1,8 @@
-import * as React from 'react';
+import React from "react";
 import {
     Box,
     Button,
-    Checkbox,
-    FormControlLabel,
-    RadioGroup,
     TextField,
-    Radio,
-    FormControl,
-    FormLabel,
     Theme,
     MenuItem
 } from "@material-ui/core";
@@ -28,6 +22,8 @@ const useStyles = makeStyles((theme: Theme) => {
     }
 })
 
+const KEY_CATEGORIES:string = "categories_id";
+
 const Form = () => {
     const classes = useStyles();
 
@@ -45,13 +41,13 @@ const Form = () => {
     });
 
     useEffect(() => {
-        register({name: "categories_id"})
+        register({name: KEY_CATEGORIES})
     },[register]);
 
     useEffect(() => {
         categoryHttp
             .list()
-            .then(resp => setCategories(resp.data.data));
+            .then(({data}) => setCategories(data.data));
     }, []); //observar infomações não há limits
 
 
@@ -70,19 +66,20 @@ const Form = () => {
                 name="name"
                 label="Nome"
                 fullWidth
+                variant={"outlined"}
                 />
 
             <TextField
                 select
                 name="categories_id"
-                value={watch('categories_id')}
+                value={watch(KEY_CATEGORIES)}
                 label="Categorias"
                 margin={"normal"}
                 variant="outlined"
                 fullWidth
-                // onChange={(e) => {
-                //     setValue("categories_id", e.target.value)
-                // }}
+                onChange={(e) => {
+                    setValue(KEY_CATEGORIES, parseInt(e.target.value));
+                }}
                 SelectProps={{
                     multiple: true
                 }}
@@ -93,6 +90,7 @@ const Form = () => {
                 </MenuItem>
                 {
                     categories.map(
+
                         (category, key) => (
                             <MenuItem key={key} value={category.id}>{category.name}</MenuItem>
                         )

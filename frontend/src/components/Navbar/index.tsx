@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme: Theme) => ({
             width: 170
         }
     }
-
 }));
 
 export const Navbar: React.FC = () => {

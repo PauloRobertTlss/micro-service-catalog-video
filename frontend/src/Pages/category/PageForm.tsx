@@ -8,8 +8,6 @@ const PageForm = () => {
     const {id} = useParams();
 
     return (
-
-
         <Page title={id ? "Cadastro categorias" : "Editar categoria"}>
             <Box>
 

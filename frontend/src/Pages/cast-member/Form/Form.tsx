@@ -4,7 +4,7 @@ import {ButtonProps} from '@material-ui/core/Button'
 import {makeStyles} from "@material-ui/core/styles";
 import {useForm} from "react-hook-form";
 import castMemberHttp from "../../../utils/http/cast-member-http";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 
 const useStyles = makeStyles((theme: Theme) => {
@@ -25,6 +25,7 @@ const Form = () => {
     };
 
     const {register, handleSubmit, getValues, setValue} = useForm();
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
         register({name: "type"});
@@ -34,6 +35,8 @@ const Form = () => {
 
 
     function onSubmit(formData, event) {
+
+        setLoading(true);
 
         castMemberHttp
             .create(formData)
@@ -48,6 +51,7 @@ const Form = () => {
                 name="name"
                 label="Nome"
                 fullWidth
+                variant={"outlined"}
                 />
             <FormControl margin="normal">
                 <FormLabel component="legend">Tipo</FormLabel>

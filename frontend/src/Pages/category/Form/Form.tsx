@@ -6,7 +6,8 @@ import {useForm} from "react-hook-form";
 import categoryHttp from "../../../utils/http/category-http";
 import * as yup from '../../../utils/vendor/yup';
 import {useEffect, useState} from "react";
-import {useParams} from "react-router";
+import {useParams, useHistory} from "react-router";
+import {useSnackbar} from "notistack";
 
 
 const useStyles = makeStyles((theme: Theme) => {
@@ -29,7 +30,8 @@ const Form = () => {
     const {register, handleSubmit, getValues, setValue, errors, reset, watch} = useForm({
         validationSchema
     });
-
+    const snackBar = useSnackbar();
+    const history = useHistory();
     const {id} = useParams();
     const [category, setCategory] = useState<{ id: string } | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
@@ -68,12 +70,28 @@ const Form = () => {
             ? categoryHttp.create(formData)
             : categoryHttp.update(category.id, formData);
 
-        http.finally(() => setLoading(false))
+        http.then(({data}) => {
+            snackBar.enqueueSnackbar('Categoria foi criada', {
+                variant: "success"
+            });
+            setTimeout(() => {
+                event ? (
+                    id ? history.replace(`/categories/${data.data.id}/edit`)
+                    : history.push(`/categories/${data.data.id}/edit`) //salvar e ir para edição
+                ) : history.push('/categories')
+            });
+        }).catch((errors) => {
+            snackBar.enqueueSnackbar('Ops! Algo não aconteceu', {
+                variant: "error"
+            });
+        }).finally(() => setLoading(false))
+
 
 
     }
 
     return (
+        //handleSubmit middleawer para validar e depois passa para onSubmin
         <form onSubmit={handleSubmit(onSubmit)}>
             <TextField
                 inputRef={register}

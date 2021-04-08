@@ -3,8 +3,8 @@ import {Box, Button, Checkbox, FormControlLabel, TextField, Theme} from "@materi
 import {ButtonProps} from '@material-ui/core/Button'
 import {makeStyles} from "@material-ui/core/styles";
 import {useForm} from "react-hook-form";
-import categoryHttp from "../../../utils/http/category-http";
-import * as yup from '../../../utils/vendor/yup';
+import categoryHttp from "../../utils/http/category-http";
+import * as yup from '../../utils/vendor/yup';
 import {useEffect, useState} from "react";
 import {useParams, useHistory} from "react-router";
 import {useSnackbar} from "notistack";
@@ -20,20 +20,32 @@ const useStyles = makeStyles((theme: Theme) => {
 
 const validationSchema = yup.object().shape({
     name: yup.string()
-        .label('Nome')
+        .label('name')
         .required()
+        .max(255)
 });
 
 const Form = () => {
-    const classes = useStyles();
-
-    const {register, handleSubmit, getValues, setValue, errors, reset, watch} = useForm({
-        validationSchema
+    const {register,
+        handleSubmit,
+        getValues,
+        setValue,
+        errors,
+        reset,
+        watch
+    } = useForm({
+        validationSchema,
+        defaultValues: {
+            is_active: true,
+            name: null
+        }
     });
+
+    const classes = useStyles();
     const snackBar = useSnackbar();
     const history = useHistory();
     const {id} = useParams();
-    const [category, setCategory] = useState<{ id: string } | null>(null);
+    const [category, setCategory] = useState<{ id: string, name: string} | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
 
     const buttonProps: ButtonProps = {
@@ -53,44 +65,52 @@ const Form = () => {
             return;
         }
 
-        setLoading(true);
-
         async function getCategories() {
-            await categoryHttp.get(id)
-                .then(({data}) => {
-                    setCategory(data.data);
-                    reset(data.data);
-                }).finally(() => setLoading(false))
+            setLoading(true);
+            try {
+                const {data} = await categoryHttp.get(id)
+                setCategory(data.data);
+                reset(data.data);
+            }catch (e) {
+                snackBar.enqueueSnackbar('Server error', {
+                    variant: "success"
+                });
+            } finally {
+                setLoading(false)
+            }
         }
 
         getCategories();
-
-
     });
 
-    function onSubmit(formData, event) {
+    async function onSubmit(formData, event) {
 
         setLoading(true);
 
-        const http = !category
-            ? categoryHttp.create(formData)
-            : categoryHttp.update(category.id, formData);
+        try {
+            const http = !category
+                ? categoryHttp.create(formData)
+                : categoryHttp.update(category.id, formData);
 
-        http.then(({data}) => {
+            const {data} = await http;
             snackBar.enqueueSnackbar('Categoria foi criada', {
                 variant: "success"
             });
+
             setTimeout(() => {
                 event ? (
                     id ? history.replace(`/categories/${data.data.id}/edit`)
-                    : history.push(`/categories/${data.data.id}/edit`) //salvar e ir para edição
+                        : history.push(`/categories/${data.data.id}/edit`) //salvar e ir para edição
                 ) : history.push('/categories')
             });
-        }).catch((errors) => {
+
+        } catch (errors) {
             snackBar.enqueueSnackbar('Ops! Algo não aconteceu', {
                 variant: "error"
             });
-        }).finally(() => setLoading(false))
+        }finally {
+            setLoading(false);
+        }
 
 
 
@@ -100,15 +120,15 @@ const Form = () => {
         //handleSubmit middleawer para validar e depois passa para onSubmin
         <form onSubmit={handleSubmit(onSubmit)}>
             <TextField
-                inputRef={register}
                 name="name"
                 label="Nome"
                 fullWidth
                 variant={"outlined"}
+                inputRef={register}
+                disabled={loading}
                 error={errors.name !== undefined}
                 helperText={errors.name && errors.name.message}
                 InputLabelProps={{shrink: true}}
-                disabled={loading}
             />
             <TextField
                 inputRef={register}

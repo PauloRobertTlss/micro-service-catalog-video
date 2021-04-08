@@ -6,14 +6,14 @@ import {
     RadioGroup,
     TextField,
 } from "@material-ui/core";
-import useForm from "react-hook-form";
-import castMemberHttp from "../../util/http/cast-member-http";
+import {useForm} from "react-hook-form";
+import castMemberHttp from "../../utils/http/cast-member-http";
 import {useEffect} from "react";
-import * as yup from '../../util/vendor/yup';
+import * as yup from '../../utils/vendor/yup';
 import {useSnackbar} from "notistack";
 import {useHistory, useParams} from "react-router";
 import {useState} from "react";
-import {CastMember} from "../../util/models";
+import {CastMember} from "../../utils/models";
 import SubmitActions from "../../components/SubmitActions";
 import {DefaultForm} from "../../components/DefaultForm";
 
@@ -24,7 +24,7 @@ const validationSchema = yup.object().shape({
         .max(255),
     type: yup.number()
         .label('Tipo')
-        .required(),
+        .required()
 });
 
 export const Form = () => {

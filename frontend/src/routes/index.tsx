@@ -1,11 +1,11 @@
 import {RouteProps} from "react-router-dom";
 import Dashboard from "../Pages/Dashboard";
 import CategoryList from "../Pages/category/PageList";
-import CategoryCreate from "../Pages/category/PageForm";
+import CategoryForm from "../Pages/category/PageForm";
 import CastMemberList from "../Pages/cast-member/PageList";
-import CastMemberCreate from "../Pages/cast-member/PageForm";
+import CastMemberForm from "../Pages/cast-member/PageForm";
 import GenreList from "../Pages/genre/PageList";
-import GenreCreate from "../Pages/genre/PageForm";
+import GenreForm from "../Pages/genre/PageForm";
 
 export interface CustomRouteProps extends RouteProps {
     slug:  string,
@@ -31,14 +31,14 @@ const routes: CustomRouteProps[] = [
         slug: 'categories.create',
         label: 'Registrar categoria',
         path: '/categories/create',
-        component: CategoryCreate,
+        component: CategoryForm,
         exact: true
     },
     {
         slug: 'categories.edit',
         label: 'Editar categoria',
         path: '/categories/:id/edit',
-        component: CategoryCreate,
+        component: CategoryForm,
         exact: true
     },
     {
@@ -52,14 +52,14 @@ const routes: CustomRouteProps[] = [
         slug: 'cast_members.create',
         label: 'Registrar elenco',
         path: '/cast-members/create',
-        component: CastMemberCreate,
+        component: CastMemberForm,
         exact: true
     },
     {
         slug: 'cast_members.edit',
         label: 'Editar categoria',
         path: '/cast-members/:id/edit',
-        component: CastMemberList,
+        component: CastMemberForm,
         exact: true
     },
     {
@@ -73,14 +73,14 @@ const routes: CustomRouteProps[] = [
         slug: 'genres.create',
         label: 'Registrar gênero',
         path: '/genres/create',
-        component: GenreCreate,
+        component: GenreForm,
         exact: true
     },
     {
         slug: 'genres.edit',
         label: 'Editar categoria',
         path: '/genres/:id/edit',
-        component: GenreList,
+        component: GenreForm,
         exact: true
     },
 

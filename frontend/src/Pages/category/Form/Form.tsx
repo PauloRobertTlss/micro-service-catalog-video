@@ -55,11 +55,17 @@ const Form = () => {
 
         setLoading(true);
 
-        categoryHttp.get(id)
-            .then(({data}) => {
-                setCategory(data.data);
-                reset(data.data);
-            }).finally(() => setLoading(false))
+        async function getCategories() {
+            await categoryHttp.get(id)
+                .then(({data}) => {
+                    setCategory(data.data);
+                    reset(data.data);
+                }).finally(() => setLoading(false))
+        }
+
+        getCategories();
+
+
     });
 
     function onSubmit(formData, event) {

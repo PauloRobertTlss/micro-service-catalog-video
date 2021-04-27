@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Page} from "../../components/Page";
 import {Box, Fab} from "@material-ui/core";
-import Form from './Form/Form'
+import Form from './Form'
 
 
 const PageForm = () => {

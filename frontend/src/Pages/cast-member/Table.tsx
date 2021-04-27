@@ -5,6 +5,7 @@ import {Chip} from "@material-ui/core";
 import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 import castMemberHttp from "../../utils/http/cast-member-http";
+import {httpVideo} from "../../utils/http";
 
 type Props = {
 
@@ -52,9 +53,12 @@ const Table = (props: Props) => {
 
     //compoentDidUpdate - listene
     useEffect(() => {
-        castMemberHttp
-            .list()
-            .then(resp => setData(resp.data.data));
+        //iife
+        (async function getCastMember() {
+            const {data} = await httpVideo.get('cast_members');
+            setData(data.data)
+        })()
+
         return () => {} //willmount() unica vez
     }, [count]); //observar infomações não há limits
 

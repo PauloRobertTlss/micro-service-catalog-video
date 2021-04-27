@@ -77,8 +77,8 @@ const Form = () => {
     // },[register]);
 
     useEffect(() => {
-
-        async function loadData() {
+        let isSubscribed = true;
+        (async () => {
             setLoading(true);
             const promises = [categoryHttp.list()];
 
@@ -88,15 +88,20 @@ const Form = () => {
 
             try {
                 const [categoriesResponse, genreResponse] = await Promise.all(promises);
-                setCategories(categoriesResponse.data.data);
-                if (id) {
-                    setGenre(genreResponse.data.data);
-                    reset({
-                        ...genreResponse.data.data,
-                        categories_id: genreResponse.data.data.categories_id.map(category => category.id)
-                    });
-                }
 
+                if (isSubscribed) {
+
+                    setCategories(categoriesResponse.data.data);
+                    if (id) {
+
+                        setGenre(genreResponse.data.data);
+                        const categories = genreResponse.data.data.categories_id.map(category => category.id);
+                        reset({
+                            ...genreResponse.data.data,
+                            categories_id: categories
+                        });
+                    }
+                }
             }catch (error) {
                 snackBar.enqueueSnackbar('Server error', {
                     variant: "error"
@@ -104,9 +109,12 @@ const Form = () => {
             } finally {
                 setLoading(false)
             }
+        })();
+
+        return () => {
+           isSubscribed = false;
         }
 
-        loadData();
     }, []); //observar infomações não há limits
 
     useEffect(() => {
